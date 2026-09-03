@@ -309,16 +309,26 @@ export function useExamSync({ currentUser, examId, confirmDialog }) {
 
             // Thu hồi các câu hỏi cũ không còn tồn tại trong danh sách hiện tại (khi cập nhật)
             if (editId) {
-                // Query theo editId (mã cũ) để dọn dẹp câu hỏi cũ
-                const qSnap = await getDocs(query(collection(db, "questions"), where("examId", "==", editId)));
-                const currentQuestionIds = questionsList.map(q => String(q.id));
-                qSnap.docs.forEach(d => {
-                    if (!currentQuestionIds.includes(d.id)) batch.delete(d.ref);
-                });
+                try {
+                    const qSnap = await getDocs(query(collection(db, "questions"), where("examId", "==", editId)));
+                    const currentQuestionIds = questionsList.map(q => String(q.id));
+                    qSnap.docs.forEach(d => {
+                        const qData = d.data();
+                        // Chỉ thêm lệnh xóa nếu câu hỏi thuộc về user hiện tại hoặc không có uid
+                        if (!currentQuestionIds.includes(d.id) && (!qData.uid || qData.uid === currentUser?.uid)) {
+                            batch.delete(d.ref);
+                        }
+                    });
 
-                // Nếu đổi mã đề thi (editId !== finalId), ta cần xóa bản ghi cũ ở Firestore
-                if (editId !== finalId) {
-                    batch.delete(doc(db, "exams", editId));
+                    // Nếu đổi mã đề thi (editId !== finalId), ta xóa bản ghi cũ nếu đúng chủ sở hữu
+                    if (editId !== finalId) {
+                        const oldExamSnap = await getDoc(doc(db, "exams", editId));
+                        if (oldExamSnap.exists() && (!oldExamSnap.data()?.uid || oldExamSnap.data()?.uid === currentUser?.uid)) {
+                            batch.delete(doc(db, "exams", editId));
+                        }
+                    }
+                } catch (cleanErr) {
+                    console.warn("Bỏ qua lỗi dọn dẹp câu hỏi cũ:", cleanErr);
                 }
             }
 
@@ -370,7 +380,10 @@ export function useExamSync({ currentUser, examId, confirmDialog }) {
         if (currentUser?.uid) {
             try { await deleteDoc(doc(db, "drafts", currentUser.uid)); } catch (e) {}
         }
-        toast.success(editId ? "Cập nhật đề thi thành công!" : "Lưu đề thi mới thành công!");
+        
+        if (cloudSuccess) {
+            toast.success(editId ? "Cập nhật đề thi thành công!" : "Lưu đề thi mới thành công!");
+        }
         router.push("/my-exams");
     };
 
