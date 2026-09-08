@@ -65,25 +65,25 @@ Dự án sử dụng Next.js App Router kết hợp với Firebase. Logic nghi�
 
 ```mermaid
 graph TD
-    subgraph Giao dien Nguoi dung (Trinh duyet Client)
-        TeacherPortal[Cong Giao vien: Soan de, Live Quiz, Thong ke]
-        StudentPortal[Cong Hoc sinh: Lam bai, Chong gian lan, Flashcards]
-        ParentPortal[Cong Phu huynh: Theo doi tien do, Bieu do]
-        AdminPortal[Cong Admin: Quan tri tai khoan]
-        ClientStore[Zustand Store & SWR Cache]
+    subgraph UI ["Giao dien Nguoi dung (Trinh duyet Client)"]
+        TeacherPortal["Cong Giao vien: Soan de, Live Quiz, Thong ke"]
+        StudentPortal["Cong Hoc sinh: Lam bai, Chong gian lan, Flashcards"]
+        ParentPortal["Cong Phu huynh: Theo doi tien do, Bieu do"]
+        AdminPortal["Cong Admin: Quan tri tai khoan"]
+        ClientStore["Zustand Store & SWR Cache"]
     end
 
-    subgraph Tang Xu ly Trung gian (Next.js App Router)
-        RouteHandlers[API Routes & Server Actions]
-        GradingEngine[Bo cham diem: /api/exams/submit]
-        AIEngine[Xu ly AI OCR: Gemini 2.5 Flash]
+    subgraph Middleware ["Tang Xu ly Trung gian (Next.js App Router)"]
+        RouteHandlers["API Routes & Server Actions"]
+        GradingEngine["Bo cham diem: /api/exams/submit"]
+        AIEngine["Xu ly AI OCR: Gemini 2.5 Flash"]
     end
 
-    subgraph Dich vu Cloud & Persistence
-        FirebaseAuth[Firebase Authentication]
-        Firestore[(Firebase Firestore - Rules Enforced)]
-        Cloudinary[Luu tru anh Cloudinary]
-        GCloudVision[Google Cloud Vision API]
+    subgraph Cloud ["Dich vu Cloud & Persistence"]
+        FirebaseAuth["Firebase Authentication"]
+        Firestore[("Firebase Firestore - Rules Enforced")]
+        Cloudinary["Luu tru anh Cloudinary"]
+        GCloudVision["Google Cloud Vision API"]
     end
 
     TeacherPortal --> ClientStore
@@ -92,7 +92,7 @@ graph TD
     ClientStore --> RouteHandlers
     RouteHandlers --> GradingEngine
     RouteHandlers --> AIEngine
-    GradingEngine --> FirebaseAdmin[Firebase Admin SDK]
+    GradingEngine --> FirebaseAdmin["Firebase Admin SDK"]
     FirebaseAdmin --> Firestore
     FirebaseAdmin --> FirebaseAuth
     AIEngine --> GCloudVision
@@ -296,25 +296,25 @@ The platform is built with Next.js App Router and Firebase. Business logic is se
 
 ```mermaid
 graph TD
-    subgraph User Interface (Client Browser)
-        TeacherPortal[Teacher Portal: Exam Editor, Live Quiz Host, Analytics]
-        StudentPortal[Student Portal: Exam Session, Anti-Cheat, Flashcards]
-        ParentPortal[Parent Portal: Progress Tracker, Visual Charts]
-        AdminPortal[Admin Portal: Account & Role Management]
-        ClientStore[Zustand Store & SWR Cache]
+    subgraph UI ["User Interface (Client Browser)"]
+        TeacherPortal["Teacher Portal: Exam Editor, Live Quiz Host, Analytics"]
+        StudentPortal["Student Portal: Exam Session, Anti-Cheat, Flashcards"]
+        ParentPortal["Parent Portal: Progress Tracker, Visual Charts"]
+        AdminPortal["Admin Portal: Account & Role Management"]
+        ClientStore["Zustand Store & SWR Cache"]
     end
 
-    subgraph Server Middleware (Next.js App Router)
-        RouteHandlers[API Routes & Server Actions]
-        GradingEngine[Grading Engine: /api/exams/submit]
-        AIEngine[AI OCR Processor: Gemini 2.5 Flash]
+    subgraph Middleware ["Server Middleware (Next.js App Router)"]
+        RouteHandlers["API Routes & Server Actions"]
+        GradingEngine["Grading Engine: /api/exams/submit"]
+        AIEngine["AI OCR Processor: Gemini 2.5 Flash"]
     end
 
-    subgraph Cloud Infrastructure & Persistence
-        FirebaseAuth[Firebase Authentication]
-        Firestore[(Firebase Firestore - Rules Enforced)]
-        Cloudinary[Cloudinary Image Cloud]
-        GCloudVision[Google Cloud Vision API]
+    subgraph Cloud ["Cloud Infrastructure & Persistence"]
+        FirebaseAuth["Firebase Authentication"]
+        Firestore[("Firebase Firestore - Rules Enforced")]
+        Cloudinary["Cloudinary Image Cloud"]
+        GCloudVision["Google Cloud Vision API"]
     end
 
     TeacherPortal --> ClientStore
@@ -323,7 +323,7 @@ graph TD
     ClientStore --> RouteHandlers
     RouteHandlers --> GradingEngine
     RouteHandlers --> AIEngine
-    GradingEngine --> FirebaseAdmin[Firebase Admin SDK]
+    GradingEngine --> FirebaseAdmin["Firebase Admin SDK"]
     FirebaseAdmin --> Firestore
     FirebaseAdmin --> FirebaseAuth
     AIEngine --> GCloudVision
