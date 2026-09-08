@@ -66,7 +66,7 @@ export default function StudentLayout({ children }) {
                                 <img src="/logo.png" alt="Logo" className="w-full h-full object-cover" />
                             </div>
                             <span className="font-black text-xl tracking-tight hidden sm:inline-block">
-                                E-Learning
+                                Quizenta
                             </span>
                         </Link>
                         

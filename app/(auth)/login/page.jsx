@@ -107,7 +107,7 @@ export default function LoginPage() {
                         <img src="/logo.png" alt="Logo" className="w-full h-full object-cover" />
                     </div>
                     <h2 className="text-lg font-black text-foreground tracking-tight">Đăng Nhập</h2>
-                    <p className="text-[10px] text-muted-foreground mt-0.5">Hệ thống quản lý Ngân hàng Câu hỏi nâng cao</p>
+                    <p className="text-[10px] text-muted-foreground mt-0.5">Quizenta — Nền tảng khảo thí thông minh</p>
                 </div>
 
                 {error && (

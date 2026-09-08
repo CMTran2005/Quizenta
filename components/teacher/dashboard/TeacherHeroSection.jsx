@@ -22,10 +22,10 @@ export default function TeacherHeroSection({ currentUser }) {
                     Hỗ trợ AI Gemini
                 </div>
                 <h1 className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight leading-tight bg-gradient-to-r from-white via-slate-100 to-slate-300 bg-clip-text text-transparent">
-                    Hệ Thống Ngân Hàng <br className="hidden sm:inline" /> Câu Hỏi & Đề Thi
+                    Quizenta — Khảo Thí <br className="hidden sm:inline" /> & Ngân Hàng Đề Thi
                 </h1>
                 <p className="text-sm sm:text-base text-slate-300 max-w-md leading-relaxed">
-                    Chào mừng {currentUser ? <span className="font-bold text-white">{currentUser.name}</span> : "bạn"} đến với hệ thống quản lý, biên soạn đề thi chuyên nghiệp tích hợp OCR quét đề nhanh bằng AI.
+                    Chào mừng {currentUser ? <span className="font-bold text-white">{currentUser.name}</span> : "bạn"} đến với Quizenta, nền tảng khảo thí và biên soạn đề thi chuyên nghiệp tích hợp OCR quét đề nhanh bằng AI.
                 </p>
                 <div className="pt-2 flex flex-wrap gap-3">
                     <Link href="/create-question">

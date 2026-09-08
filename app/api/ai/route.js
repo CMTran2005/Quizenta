@@ -284,7 +284,7 @@ Hãy trả về kết quả dưới dạng một chuỗi JSON duy nhất, KHÔNG
                             "Authorization": `Bearer ${process.env.OPENROUTER_API_KEY}`,
                             "Content-Type": "application/json",
                             "HTTP-Referer": "https://exam-bank-system.vercel.app", 
-                            "X-Title": "Exam Bank System"
+                            "X-Title": "Quizenta"
                         },
                         body: JSON.stringify({
                             model: orModel, 

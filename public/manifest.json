@@ -1,7 +1,7 @@
 {
-  "name": "Exam Bank System",
-  "short_name": "ExamBank",
-  "description": "Nền tảng thi và khảo thí trực tuyến",
+  "name": "Quizenta - Hệ thống khảo thí thông minh",
+  "short_name": "Quizenta",
+  "description": "Quizenta - Nền tảng thi và khảo thí trực tuyến thông minh",
   "icons": [
     {
       "src": "/icons/icon-192x192.png",

@@ -1,12 +1,12 @@
 <div align="center">
 
-<img src="./public/logo.png" alt="Exam Bank Logo" width="120" />
+<img src="./public/logo.png" alt="Quizenta Logo" width="120" />
 
-# Exam Bank — Hệ Thống Quản Lý Đề Thi Thông Minh
+# Quizenta — Hệ Thống Khảo Thí & Ngân Hàng Đề Thi Thông Minh
 
 [![Vercel Deployment](https://img.shields.io/badge/Live_Demo-Vercel-black?style=for-the-badge&logo=vercel)](https://exam-bank-system.vercel.app/)
 
-![Version](https://img.shields.io/badge/version-1.9.1-gray)
+![Version](https://img.shields.io/badge/version-2.0.0-gray)
 ![Language](https://img.shields.io/badge/JavaScript-96.5%25-fff2b2)
 ![TypeScript](https://img.shields.io/badge/TypeScript-3.1%25-bbf7d0)
 ![CSS](https://img.shields.io/badge/CSS-0.4%25-e9d5ff)
@@ -23,7 +23,7 @@
 
 ### Giới Thiệu
 
-Exam Bank System là một giải pháp quản lý ngân hàng đề thi và tổ chức thi trực tuyến toàn diện, được thiết kế dành cho các cơ sở giáo dục hiện đại. Nền tảng hỗ trợ soạn thảo đề thi, quản lý ngân hàng câu hỏi, tổ chức thi trực tuyến và phân tích kết quả học tập.
+Quizenta là một nền tảng quản lý ngân hàng đề thi và tổ chức thi trực tuyến thông minh, toàn diện, được thiết kế dành cho các cơ sở giáo dục hiện đại. Nền tảng hỗ trợ soạn thảo đề thi, quản lý ngân hàng câu hỏi, tổ chức thi trực tuyến và phân tích kết quả học tập.
 
 Hệ thống kết hợp các công nghệ tiên tiến bao gồm trí tuệ nhân tạo (Gemini 2.5 Flash) để tự động hóa quá trình nhập liệu đề thi từ ảnh (AI OCR), MathLive để nhập công thức toán học và KaTeX để hiển thị công thức.
 
@@ -254,7 +254,7 @@ Dự án được phát hành theo giấy phép MIT. Xem chi tiết trong tệp 
 
 ### Introduction
 
-Exam Bank System is a comprehensive online question bank management and examination platform designed for modern educational institutions. The platform supports exam editing, question bank management, online exam delivery and performance analytics.
+Quizenta is a comprehensive online examination and question bank management platform designed for modern educational institutions. The platform supports exam editing, question bank management, online exam delivery and performance analytics.
 
 The system integrates advanced technologies including Large Language Models (Gemini 2.5 Flash) for automated question digitization (AI OCR), MathLive for formula input and KaTeX for rendering mathematics.
 

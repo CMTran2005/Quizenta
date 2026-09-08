@@ -17,14 +17,14 @@ export default function Footer() {
                     <BookOpen className="h-4 w-4 shrink-0" />
                     <span className="text-xs">
                         © {year}{" "}
-                        <span className="font-semibold text-foreground">Ngân Hàng Câu Hỏi Thi</span>
-                        {" "}— Hệ thống quản lý đề thi chuyên nghiệp
+                        <span className="font-semibold text-foreground">Quizenta</span>
+                        {" "}— Nền tảng khảo thí & quản lý đề thi chuyên nghiệp
                     </span>
                 </div>
 
                 <div className="flex flex-wrap items-center justify-center gap-4 text-xs text-muted-foreground">
                     <a
-                        href="mailto:cmtran2005@gmail.com?subject=Góp ý hệ thống Exam Bank"
+                        href="mailto:cmtran2005@gmail.com?subject=Góp ý hệ thống Quizenta"
                         className="flex items-center gap-1 hover:text-foreground transition-colors"
                     >
                         <MessageSquareText className="h-3.5 w-3.5" />
@@ -47,7 +47,7 @@ export default function Footer() {
                         <span>GitHub</span>
                     </a>
                     <span className="text-border">|</span>
-                    <span>v1.9.1</span>
+                    <span>v2.0.0</span>
                 </div>
 
             </div>

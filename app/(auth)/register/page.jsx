@@ -84,7 +84,7 @@ export default function RegisterPage() {
                         <img src="/logo.png" alt="Logo" className="w-full h-full object-cover" />
                     </div>
                     <h2 className="text-lg font-black text-foreground tracking-tight">Tạo Tài Khoản</h2>
-                    <p className="text-[10px] text-muted-foreground mt-0.5">Đăng ký tham gia hệ thống soạn thảo đề thi</p>
+                    <p className="text-[10px] text-muted-foreground mt-0.5">Đăng ký tài khoản Quizenta</p>
                 </div>
 
                 {error && (

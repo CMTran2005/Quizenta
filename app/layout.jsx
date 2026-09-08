@@ -19,8 +19,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Exam Bank",
-  description: "Hệ thống tạo và quản lý ngân hàng câu hỏi thi",
+  title: "Quizenta — Hệ thống ngân hàng đề thi & khảo thí thông minh",
+  description: "Quizenta — Hệ thống tạo và quản lý ngân hàng câu hỏi, khảo thí trực tuyến thông minh",
   manifest: "/manifest.json",
 };
 

@@ -43,7 +43,7 @@ export default function ParentLayout({ children }) {
                                 <img src="/logo.png" alt="Logo" className="w-full h-full object-cover" />
                             </div>
                             <span className="text-xl font-black text-foreground tracking-tight">
-                                Parent<span className="text-sky-500">Portal</span>
+                                Quizenta <span className="text-sky-500">Parent</span>
                             </span>
                         </Link>
 

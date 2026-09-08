@@ -67,7 +67,7 @@ export default function CompleteProfilePage() {
                 </div>
                 
                 <h1 className="text-2xl md:text-3xl font-black text-foreground tracking-tight mb-2">Hoàn thiện hồ sơ</h1>
-                <p className="text-muted-foreground mb-8 text-sm md:text-base">Bạn tham gia Exam Bank với tư cách là gì?</p>
+                <p className="text-muted-foreground mb-8 text-sm md:text-base">Bạn tham gia Quizenta với tư cách là gì?</p>
 
                 {error && (
                     <div className="mb-6 p-3 rounded-lg border border-red-200 bg-red-50 text-xs font-semibold text-red-600">

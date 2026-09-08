@@ -1,6 +1,6 @@
 {
-  "name": "exam-bank-system",
-  "version": "1.9.1",
+  "name": "quizenta",
+  "version": "2.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",

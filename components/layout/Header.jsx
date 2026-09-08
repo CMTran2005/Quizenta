@@ -56,8 +56,8 @@ export default function Header({ onMenuToggle }) {
                         <img src="/logo.png" alt="Logo" className="w-full h-full object-cover" />
                     </div>
                     <div className="hidden sm:block">
-                        <p className="text-sm font-bold text-foreground leading-tight">Exam Bank</p>
-                        <p className="text-[11px] text-muted-foreground leading-tight">Hệ thống quản lý đề thi</p>
+                        <p className="text-sm font-bold text-foreground leading-tight">Quizenta</p>
+                        <p className="text-[11px] text-muted-foreground leading-tight">Nền tảng khảo thí thông minh</p>
                     </div>
                 </Link>
 
