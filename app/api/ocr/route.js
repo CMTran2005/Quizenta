@@ -208,7 +208,7 @@ Hãy trả về kết quả dưới dạng một chuỗi JSON duy nhất, KHÔNG
                         headers: {
                             "Authorization": `Bearer ${process.env.OPENROUTER_API_KEY}`,
                             "Content-Type": "application/json",
-                            "HTTP-Referer": "https://exam-bank-system.vercel.app", 
+                            "HTTP-Referer": "https://quizenta.vercel.app", 
                             "X-Title": "Quizenta"
                         },
                         body: JSON.stringify({

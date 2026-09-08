@@ -4,7 +4,7 @@
 
 # Quizenta — Hệ Thống Khảo Thí & Ngân Hàng Đề Thi Thông Minh
 
-[![Vercel Deployment](https://img.shields.io/badge/Live_Demo-Vercel-black?style=for-the-badge&logo=vercel)](https://exam-bank-system.vercel.app/)
+[![Vercel Deployment](https://img.shields.io/badge/Live_Demo-Vercel-black?style=for-the-badge&logo=vercel)](https://quizenta.vercel.app/)
 
 ![Version](https://img.shields.io/badge/version-2.0.0-gray)
 ![Language](https://img.shields.io/badge/JavaScript-96.5%25-fff2b2)
@@ -177,7 +177,7 @@ npm run lint
 ### Cấu Trúc Thư Mục
 
 ```text
-exam-bank-system/
+quizenta/
 ├── app/                          # Dẫn hướng Next.js App Router và Server API
 │   ├── api/                      # Các API Routes xử lý Server-side (Chấm thi, AI OCR)
 │   ├── (teacher)/                # Giao diện Cổng Giáo viên (Soạn đề, quản lý lớp)
